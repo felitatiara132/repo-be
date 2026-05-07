@@ -21,6 +21,7 @@ import { StatsModule } from './stats/stats.module';
 import { RecycleBinModule } from './recycle-bin/recycle-bin.module';
 import { SettingsModule } from './settings/settings.module';
 import { CronModule } from './cron/cron.module';
+import { IntegrationModule } from './integration/integration.module';
 
 @Module({
   imports: [
@@ -47,6 +48,7 @@ import { CronModule } from './cron/cron.module';
     RecycleBinModule,
     SettingsModule,
     CronModule,
+    IntegrationModule,
     ScheduleModule.forRoot(),
   ],
   controllers: [AppController],

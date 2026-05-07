@@ -25,7 +25,7 @@ email: string;
   @JoinColumn({ name: 'role_id' })
   role: Role;
 
-  @Column({ type: 'varchar', length: 50 })
+  @Column({ type: 'varchar', length: 50, nullable: true, default: 'general' })
   unit: string; // wd1 | wd2 | wd3 | sdm
 
   @OneToMany(() => FolderPermission, (permission) => permission.user)
