@@ -20,6 +20,12 @@ export class Role {
   @Column({ type: 'varchar', length: 255, nullable: true })
   description: string;
 
+  @Column({ type: 'boolean', default: true })
+  is_active: boolean;
+
+  @Column({ type: 'boolean', default: false })
+  is_system: boolean;
+
   @OneToMany(() => User, (user) => user.role)
   users: User[];
 
@@ -35,4 +41,3 @@ export class Role {
   @UpdateDateColumn()
   updated_at: Date;
 }
-
